@@ -1,26 +1,3 @@
-"""
-Phase 6/7 (Option A): Standalone Streamlit App
-----------------------------------------------------
-Runs the full multi-agent pipeline IN-PROCESS -- no separate FastAPI
-backend needed. This is the simplest architecture to deploy as a single
-Hugging Face Space.
-
-Setup (local):
-  export GROQ_API_KEY="your-key-here"
-  pip install streamlit langgraph groq chromadb rank_bm25
-              sentence-transformers scikit-learn joblib pandas numpy
-
-Run locally:
-  streamlit run app.py
-
-Deploy on Hugging Face Spaces:
-  1. Create a new Space (SDK: Streamlit)
-  2. Push this file as app.py, plus requirements.txt, plus the entire
-     artifacts/ folder (classifier, chroma_db, bm25 index, etc. -- these
-     are NOT rebuilt on the server, they must be committed/uploaded)
-  3. In Space Settings -> Repository secrets, add GROQ_API_KEY
-"""
-
 import os
 os.environ["HF_HUB_DISABLE_XET"] = "1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
