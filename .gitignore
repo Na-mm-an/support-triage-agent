@@ -1,0 +1,9 @@
+sup-agent-env/
+venv/
+env/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.vscode/
+.streamlit/secrets.toml
